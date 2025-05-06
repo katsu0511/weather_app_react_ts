@@ -3,7 +3,7 @@ import { useQuery } from 'react-query';
 import appid from './appid.txt';
 import cities from './city.json';
 import languages from './language.json';
-// import './Weather.css';
+import './Weather.css';
 
 const cityArray: ReactNode[] = [];
 for (let i = 0; i < cities.length; i++) {
