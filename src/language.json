@@ -1,0 +1,198 @@
+[
+  {
+    "lang": "English",
+    "abbr": "en"
+  },
+  {
+    "lang": "Japanese",
+    "abbr": "ja"
+  },
+  {
+    "lang": "Thai",
+    "abbr": "th"
+  },
+  {
+    "lang": "Spanish",
+    "abbr": "sp, es"
+  },
+  {
+    "lang": "French",
+    "abbr": "fr"
+  },
+  {
+    "lang": "German",
+    "abbr": "de"
+  },
+  {
+    "lang": "Italian",
+    "abbr": "it"
+  },
+  {
+    "lang": "Portuguese",
+    "abbr": "pt"
+  },
+  {
+    "lang": "Russian",
+    "abbr": "ru"
+  },
+  {
+    "lang": "Chinese Simplified",
+    "abbr": "zh_cn"
+  },
+  {
+    "lang": "Chinese Traditional",
+    "abbr": "zh_tw"
+  },
+  {
+    "lang": "Korean",
+    "abbr": "kr"
+  },
+  {
+    "lang": "Arabic",
+    "abbr": "ar"
+  },
+  {
+    "lang": "Hindi",
+    "abbr": "hi"
+  },
+  {
+    "lang": "Português Brasil",
+    "abbr": "pt_br"
+  },
+  {
+    "lang": "Swedish",
+    "abbr": "sv, se"
+  },
+  {
+    "lang": "Vietnamese",
+    "abbr": "vi"
+  },
+  {
+    "lang": "Albanian",
+    "abbr": "sq"
+  },
+  {
+    "lang": "Afrikaans",
+    "abbr": "af"
+  },
+  {
+    "lang": "Azerbaijani",
+    "abbr": "az"
+  },
+  {
+    "lang": "Basque",
+    "abbr": "eu"
+  },
+  {
+    "lang": "Belarusian",
+    "abbr": "be"
+  },
+  {
+    "lang": "Bulgarian",
+    "abbr": "bg"
+  },
+  {
+    "lang": "Catalan",
+    "abbr": "ca"
+  },
+  {
+    "lang": "Croatian",
+    "abbr": "hr"
+  },
+  {
+    "lang": "Czech",
+    "abbr": "cz"
+  },
+  {
+    "lang": "Danish",
+    "abbr": "da"
+  },
+  {
+    "lang": "Dutch",
+    "abbr": "nl"
+  },
+  {
+    "lang": "Finnish",
+    "abbr": "fi"
+  },
+  {
+    "lang": "Galician",
+    "abbr": "gl"
+  },
+  {
+    "lang": "Greek",
+    "abbr": "el"
+  },
+  {
+    "lang": "Hebrew",
+    "abbr": "he"
+  },
+  {
+    "lang": "Hungarian",
+    "abbr": "hu"
+  },
+  {
+    "lang": "Icelandic",
+    "abbr": "is"
+  },
+  {
+    "lang": "Indonesian",
+    "abbr": "id"
+  },
+  {
+    "lang": "Kurmanji (Kurdish)",
+    "abbr": "ku"
+  },
+  {
+    "lang": "Latvian",
+    "abbr": "la"
+  },
+  {
+    "lang": "Lithuanian",
+    "abbr": "lt"
+  },
+  {
+    "lang": "Macedonian",
+    "abbr": "mk"
+  },
+  {
+    "lang": "Norwegian",
+    "abbr": "no"
+  },
+  {
+    "lang": "Persian (Farsi)",
+    "abbr": "fa"
+  },
+  {
+    "lang": "Polish",
+    "abbr": "pl"
+  },
+  {
+    "lang": "Romanian",
+    "abbr": "ro"
+  },
+  {
+    "lang": "Serbian",
+    "abbr": "sr"
+  },
+  {
+    "lang": "Slovak",
+    "abbr": "sk"
+  },
+  {
+    "lang": "Slovenian",
+    "abbr": "sl"
+  },
+  {
+    "lang": "Turkish",
+    "abbr": "tr"
+  },
+  {
+    "lang": "Ukrainian",
+    "abbr": "ua, uk"
+  },
+  {
+    "lang": "Zulu",
+    "abbr": "zu"
+  }
+]
