@@ -1,3 +1,6 @@
+import { Suspense } from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ErrorBoundary } from 'react-error-boundary';
 import Weather from './Weather';
 import './App.css';
 
@@ -6,9 +9,23 @@ const weatherProps = {
   languageProps: 'en'
 };
 
+const cli = new QueryClient({
+  defaultOptions: {
+    queries: {
+      suspense: true,
+    },
+  },
+});
+
 function App() {
   return (
-    <Weather {...weatherProps} />
+    <Suspense fallback={<p>Loading...</p>}>
+      <ErrorBoundary fallback={<p>Error...</p>}>
+        <QueryClientProvider client={cli}>
+          <Weather {...weatherProps} />
+        </QueryClientProvider>
+      </ErrorBoundary>
+    </Suspense>
   );
 }
 
