@@ -1,21 +1,9 @@
-import { useState, ReactNode } from "react";
+import { useState } from "react";
 import { useQuery } from 'react-query';
 import appid from './appid.txt';
 import cities from './city.json';
 import languages from './language.json';
 import './Weather.css';
-
-const cityArray: ReactNode[] = [];
-for (let i = 0; i < cities.length; i++) {
-  const option: unknown = <option value={cities[i].name} key={cities[i].name}>{cities[i].name}</option>;
-  cityArray.push(option as ReactNode);
-}
-
-const languageArray: ReactNode[] = [];
-for (let i = 0; i < languages.length; i++) {
-  const option: unknown = <option value={languages[i].abbr} key={languages[i].abbr}>{languages[i].lang}</option>;
-  languageArray.push(option as ReactNode);
-}
 
 const getAppid = async (): Promise<string> => {
   const data = await fetch(appid);
@@ -35,7 +23,6 @@ export default function Weather({cityProps, languageProps}: WeatherProps) {
     const appid = await getAppid();
     const longitude = getCoordinate().lon;
     const latitude = getCoordinate().lat;
-    const language = getLanguage();
     const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=${language}&units=metric&appid=${appid}`);
     if (res.ok){ return res.json(); }
     throw new Error(res.statusText);
@@ -48,15 +35,6 @@ export default function Weather({cityProps, languageProps}: WeatherProps) {
       }
     }
     return cities[0].coord;
-  };
-
-  const getLanguage = (): string => {
-    for (let i = 0; i < languages.length; i++) {
-      if (languages[i].abbr === language) {
-        return languages[i].abbr;
-      }
-    }
-    return languageProps;
   };
 
   const cityChange = () => {
@@ -76,10 +54,18 @@ export default function Weather({cityProps, languageProps}: WeatherProps) {
   return (
     <div className="weather">
       <select id="city_select" onChange={cityChange}>
-        {cityArray}
+        {
+          cities.map((city) => (
+            <option value={city.name} key={city.name}>{city.name}</option>
+          ))
+        }
       </select>
       <select id="lang_select" onChange={languageChange}>
-        {languageArray}
+        {
+          languages.map((language) => (
+            <option value={language.abbr} key={language.abbr}>{language.lang}</option>
+          ))
+        }
       </select>
       <h1>{data?.name}</h1>
       <figure>
