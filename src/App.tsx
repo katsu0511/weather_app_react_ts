@@ -4,7 +4,6 @@ import { ErrorBoundary } from 'react-error-boundary';
 import Weather from './Weather';
 import Loading from './Loading';
 import Error from './Error';
-import './App.css';
 
 const weatherProps = {
   cityProps: 'Tokyo',
