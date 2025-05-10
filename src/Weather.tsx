@@ -15,9 +15,29 @@ type WeatherProps = {
   languageProps: string
 };
 
+type WeatherType = {
+  name: string
+  wind: {
+    speed: number
+  }
+  weather: Array<{
+    icon: string
+    main: string
+    description: string
+  }>
+  main: {
+    temp: number
+    feels_like: number
+    pressure: number
+    humidity: number
+    temp_min: number
+    temp_max: number
+  }
+}
+
 export default function Weather({cityProps, languageProps}: WeatherProps) {
-  const [city, setCity] = useState(cityProps);
-  const [language, setLanguage] = useState(languageProps);
+  const [city, setCity] = useState<string>(cityProps);
+  const [language, setLanguage] = useState<string>(languageProps);
 
   const fetchWeather = async () => {
     const appid = await getAppid();
@@ -49,7 +69,7 @@ export default function Weather({cityProps, languageProps}: WeatherProps) {
     alert('language changed');
   }
 
-  const { data } = useQuery('weather', fetchWeather);
+  const { data } = useQuery<WeatherType, Error>('weather', fetchWeather);
 
   return (
     <div className="weather">
